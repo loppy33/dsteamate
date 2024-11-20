@@ -1,0 +1,55 @@
+@import '../../styles/colors.module'
+
+.Home
+    min-height: 90vh
+    display: flex
+    align-items: center
+    justify-content: center
+    .first__section
+        gap: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+
+        img
+            position: absolute
+            top: -20%
+            right: -5%
+            min-width: 150px
+
+            width: 30px
+            border-radius: 12px
+            animation: anim 10s infinite
+
+        .text__container
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+            backdrop-filter: blur(20px)
+            display: flex
+            flex-direction: column
+            gap: 6px
+
+            border: 1px solid $borderColor
+            padding: 10px 20px
+            border-radius: 12px
+
+            h1
+                font-size: 50px
+
+            p
+                font-size: 18px
+
+@media screen and ( max-width: 800px )
+    .first__section
+        img
+            display: none
+
+@keyframes anim
+    0%
+        transform: rotate(-5deg)
+
+    50%
+        transform: rotate(5deg) translateY(50px)
+
+    100%
+        transform: rotate(-5deg)
